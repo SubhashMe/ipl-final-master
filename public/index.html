@@ -20,6 +20,10 @@
 
 <body>
     <h1>IPL Statistics</h1>
+    
+    <div class="search-container">
+        <input type="text" id="questionSearch" class="search-input" placeholder="Search questions (e.g., matches won, economical)..." onkeyup="filterCharts()">
+    </div>
 
     <div class="input-container">
         <span class="label">Season:</span>
@@ -34,6 +38,22 @@
                 hmtldata();
             }
         };
+
+        // Filter charts based on search input
+        function filterCharts() {
+            const query = document.getElementById("questionSearch").value.toLowerCase();
+            const cards = document.querySelectorAll(".chart-card");
+            
+            cards.forEach(card => {
+                // Get the text content of the card (which includes Highcharts titles)
+                const text = card.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
     </script>
 
     <div class="dashboard-container">
