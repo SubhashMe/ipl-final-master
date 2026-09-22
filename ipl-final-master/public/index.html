@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="description" content="IPL visualization">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    <script src="./app.js"></script>
+    <script src="./econ.js"></script>
+
+    <title>
+        IPL visualization
+    </title>
+</head>
+
+<body>
+    <h1>IPL Dataset visualization</h1>
+    <div 
+    style="width: 1130px; height: 50px; margin: 0 auto; margin-top: 20px;margin-bottom: 30px; "
+  >
+    <h3>
+      <b>Enter the IPL year to print Top Economical Bowlers in a Season</b>
+    </h3>
+    
+      <div class="input-container">
+        <span class="label">Enter year: </span>
+        <input type="number" min="2008" max="2019" class="year-input" id="year">
+        <button class="year-input-button" onclick="hmtldata()">Submit</button>
+      </div>
+    <div id="bowlers economy"class="a" style="width: 1130px; height: 500px; margin: 50px auto 0px; overflow: hidden;"></div> 
+    <div id="totalMatchesYearwise"class="a" style="width: 1130px; height: 500px; margin: 50px auto 0px; overflow: hidden;"></div>
+    <div id="matchesWonPerTeamPerYear"class="a" style="width: 1130px; height: 500px; margin: 50px auto 0px; overflow: hidden;"></div>
+    <div id="extraRunPerTeam2016"class="a" style="width: 1130px; height: 500px; margin: 50px auto 0px; overflow: hidden;"></div>
+    <div id="tenEconomicalBowler2015"class="a" style="width: 1130px; height: 500px; margin: 50px auto 0px; overflow: hidden;"></div>
+    <div id="container"class="a" style="width: 1130px; height: 500px; margin: 50px auto 0px; overflow: hidden;"></div>
+
+</body>

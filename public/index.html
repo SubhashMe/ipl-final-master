@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="IPL visualization">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    <script src="./app.js"></script>
+    <script src="./econ.js"></script>
+
+    <title>IPL Dashboard</title>
+</head>
+
+<body>
+    <h1>IPL Statistics</h1>
+
+    <div class="input-container">
+        <span class="label">Season:</span>
+        <input type="number" min="2008" max="2019" class="year-input" id="year" value="2015">
+        <button class="year-input-button" onclick="hmtldata()">Analyze</button>
+    </div>
+
+    <script>
+        // Load the dynamic chart on initial page load
+        window.onload = function () {
+            if (typeof hmtldata === 'function') {
+                hmtldata();
+            }
+        };
+    </script>
+
+    <div class="dashboard-container">
+        <div class="chart-card">
+            <div id="bowlers economy"></div>
+        </div>
+        <div class="chart-card">
+            <div id="totalMatchesYearwise"></div>
+        </div>
+        <div class="chart-card">
+            <div id="matchesWonPerTeamPerYear"></div>
+        </div>
+        <div class="chart-card">
+            <div id="extraRunPerTeam2016"></div>
+        </div>
+        <div class="chart-card">
+            <div id="tenEconomicalBowler2015"></div>
+        </div>
+        <div class="chart-card">
+            <div id="container"></div>
+        </div>
+        <div class="chart-card">
+            <div id="topRunScorers"></div>
+        </div>
+    </div>
+</body>
+
+</html>
