@@ -8,7 +8,7 @@
   ],
   "rewrites": [
     {
-      "source": "/eco",
+      "source": "/(.*)",
       "destination": "/server.js"
     }
   ]
