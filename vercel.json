@@ -4,20 +4,12 @@
     {
       "src": "server.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "public/**",
-      "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)\\.(js|css|html|png|jpg|jpeg|svg|csv)",
-      "dest": "/public/$1.$2"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/server.js"
+      "source": "/eco",
+      "destination": "/server.js"
     }
   ]
 }
