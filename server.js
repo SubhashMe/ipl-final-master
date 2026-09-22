@@ -11,10 +11,12 @@ app.get('/eco',(req,res) =>
     res.send(result);
 })
 
- var server = app.listen(process.env.PORT || 8080, function () 
- {
- var host = server.address().address
- var port = server.address().port
-
+if (require.main === module) {
+  var server = app.listen(process.env.PORT || 8080, function () {
+    var host = server.address().address
+    var port = server.address().port
     console.log("the server is ready at http://%s:%s", host,port)
-})
+  })
+}
+
+module.exports = app;
